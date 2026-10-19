@@ -1,4 +1,4 @@
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.person;
 
 /**
  * Week 1 starter class.

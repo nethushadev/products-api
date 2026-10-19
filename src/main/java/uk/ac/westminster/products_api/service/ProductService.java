@@ -1,6 +1,9 @@
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.service;
 
 import org.springframework.stereotype.Service;
+import uk.ac.westminster.products_api.product.DigitalProduct;
+import uk.ac.westminster.products_api.product.PhysicalProduct;
+import uk.ac.westminster.products_api.product.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,5 +55,12 @@ public class ProductService {
         return products.stream()
                 .filter(p -> p.getName().contains(name))
                 .toList();
+    }
+
+    public ProductService() {
+        products.add(new DigitalProduct(nextId++, "Clean Code (E-book)", 29.99,
+                "/downloads/clean-code.pdf", 4.2));
+        products.add(new PhysicalProduct(nextId++, "27-inch Monitor", 249.99,
+                5.4, "61cm x 41cm x 18cm"));
     }
 }

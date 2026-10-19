@@ -1,4 +1,4 @@
-package uk.ac.westminster.products_api;
+package uk.ac.westminster.products_api.customer;
 
 public class Address {
     private String street;
